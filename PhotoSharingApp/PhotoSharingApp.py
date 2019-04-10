@@ -4,18 +4,14 @@ from flask import Flask, render_template, request
 from botocore.client import Config
 
 
-ACCESS_KEY_ID = 'AKIAIGTFTUY2BUXLBVHA'
-ACCESS_SECRET_KEY = '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'
+ACCESS_KEY_ID = 'PASS_UR_CREDENTIALS'
+ACCESS_SECRET_KEY = 'PASS_UR_CREDENTIALS'
 BUCKET_NAME = 'photosharingappbucket'
-#DB = MySQLdb.connect(host="photosharingapp-db.c4urkzvbolqc.us-east-2.rds.amazonaws.com",
+#DB = MySQLdb.connect(host="",user="PhotoSharingApp",passwd="",db="CloudDb")
 
-                            # user="PhotoSharingApp",
-                             #passwd="",
-                             #db="CloudDb")
-
-hostname = 'photosharingapp-db.c4urkzvbolqc.us-east-2.rds.amazonaws.com'
-username = 'PhotoSharingApp'
-password = ''
+hostname = 'PASS_UR_CREDENTIALS'
+username = 'PASS_UR_CREDENTIALS'
+password = 'PASS_UR_CREDENTIALS'
 database = 'CloudDb'
 myConnection = pymysql.connect( host=hostname, user=username, passwd=password, db=database, autocommit = True, cursorclass=pymysql.cursors.DictCursor, local_infile=True)
 
@@ -106,7 +102,7 @@ def upload():
            #picid = "1"
            title = str(object.key)
            #rating = "2"
-           image_url = "https://s3.us-east-2.amazonaws.com/pics/" + f_name
+           image_url = "PASS_UR_URL" + f_name
            print image_url
            #no_of_ppl = "5"
            last_modified_time = str(object.last_modified)
